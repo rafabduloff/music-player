@@ -1,0 +1,81 @@
+{
+    "build": {
+      "beforeDevCommand": "npm run dev",
+      "beforeBuildCommand": "npm run build",
+      "devPath": "http://localhost:1420",
+      "distDir": "dist",
+      "withGlobalTauri": false
+    },
+    "package": {
+      "productName": "Yandex Music Player",
+      "version": "0.1.0"
+    },
+    "tauri": {
+      "allowlist": {
+        "all": false,
+        "shell": {
+          "all": false,
+          "open": true
+        },
+        "fs": {
+          "all": true,
+          "readFile": true,
+          "writeFile": true,
+          "readDir": true,
+          "copyFile": true,
+          "createDir": true,
+          "removeDir": true,
+          "removeFile": true,
+          "renameFile": true,
+          "exists": true
+        },
+        "path": {
+          "all": true
+        },
+        "http": {
+          "all": true,
+          "request": true
+        },
+        "notification": {
+          "all": true
+        },
+        "globalShortcut": {
+          "all": true
+        },
+        "dialog": {
+          "all": true
+        },
+        "window": {
+          "all": false,
+          "close": true,
+          "hide": true,
+          "show": true,
+          "maximize": true,
+          "minimize": true,
+          "unmaximize": true,
+          "unminimize": true,
+          "startDragging": true
+        }
+      },
+      "bundle": {
+        "active": false,
+        "targets": "all",
+        "identifier": "com.yandexmusic.player",
+        "icon": []
+      },
+      "security": {
+        "csp": null
+      },
+      "windows": [
+        {
+          "fullscreen": false,
+          "resizable": true,
+          "title": "Yandex Music Player",
+          "width": 1200,
+          "height": 800,
+          "minWidth": 800,
+          "minHeight": 600
+        }
+      ]
+    }
+  }
